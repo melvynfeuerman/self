@@ -326,7 +326,7 @@ def main():
          respmsg3 =""
          print ("Hello. How are you feeling today?")
          if (new_client == True)  :
-            respmsg1  = saydisclose()
+            respmsg1  = saydisclose(first_name)
             respmsg3  = saymenu()
             
          respmsg2  =  "\n Let us begin: \n How are you feeling?"
@@ -357,18 +357,20 @@ def reflect(fragment):
     return ' '.join(tokens)
  
  
-def saydisclose():
+def saydisclose(first_name):
 
 
   
      print ( ' ')
-     my_msg1 = '\n My name is Eliza. I am a simulated Rogerian Therapist \n It is indeed a pleasure meeting with you!'
-     my_msg2 = ' I was originally created by Dr. Joseph Weisman of MIT' 
-     my_msg2a = 'A few years ago Joe Strout  also of MIT of me create a python version of me. Evan Dempsey updated me. Mel Feuerman made a python version of me to run on Twillio!\n ' 
+     my_msga =  'Hi '
+     my_msg1 =   str(first_name) + '\n My name is Eliza. I am a simulated Rogerian Therapist \n It is indeed a pleasure meeting you!'
+     my_msg2 = ' I was created by Dr. Joseph Weizenbaum of MIT between 1964 and 1966' 
+     my_msg2a = 'Joe Strout of MIT made a Python version of me.'
+     my_msg2aa  = ' Evan Dempsey made additional more changes to me. \n Melvyn Feuerman building on the work of Strout and Dempsey made a python/Twillio version of me that you are talking to right now! \n ' 
      my_msg3 = 'You can share your feelings in a safe non-judgemental,\n'
-     my_msg4 = 'bully free environment. Using swear words is not permitted\n'
+     my_msg4 = 'bully free environment. Using profanity is not permitted\n'
      my_msg5 = 'When sharing please start with "I" so we can more easily focus on your feelings: for example:\n '
-     my_msg  =   my_msg1 +   my_msg2 + my_msg2a +   my_msg3 + my_msg4 + my_msg5
+     my_msg  =  my_msga +   my_msg1 +   my_msg2 + my_msg2a + my_msg2aa +   my_msg3 + my_msg4 + my_msg5
 
      resp =     str(my_msg)
 
